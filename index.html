@@ -1,21 +1,1204 @@
-<!doctype html>
-<html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Himanshu Sharma - IT Support Engineer | Application Support Specialist</title>
-    <meta name="description" content="Portfolio of Himanshu Sharma - 6+ years experienced IT Support Engineer, Salesforce Application Support Specialist, and Network Professional with MCA & CCNA credentials." />
-    <meta property="og:title" content="Himanshu Sharma - IT Support Engineer | Application Support Specialist" />
-    <meta property="og:description" content="Portfolio of Himanshu Sharma - 6+ years experienced IT Support Engineer, Salesforce Application Support Specialist, and Network Professional." />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  </head>
-  <body class="bg-slate-50 text-slate-900 font-sans antialiased selection:bg-sky-500 selection:text-white">
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Himanshu Sharma - IT Support Engineer | Application Support</title>
+  <meta name="description" content="Portfolio and resume of Himanshu Sharma, 6+ years experienced IT Support Engineer, Salesforce Application Support Specialist, and Network Professional.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --border: #e2e8f0;
+      --border-dark: #cbd5e1;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --text-light: #94a3b8;
+      --primary: #0284c7;
+      --primary-hover: #0369a1;
+      --primary-light: #e0f2fe;
+      --primary-dark: #075985;
+      --success: #10b981;
+      --success-light: #d1fae5;
+      --dark: #0f172a;
+      --dark-card: #1e293b;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --font: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --mono: 'JetBrains Mono', monospace;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.6; font-size: 15px; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    button { font-family: inherit; cursor: pointer; border: none; outline: none; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
+    /* Header & Nav */
+    header { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.94); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); }
+    .nav-wrap { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.05rem; }
+    .logo-badge { width: 38px; height: 38px; background: var(--dark); color: #fff; border-radius: var(--radius-sm); display: grid; place-items: center; font-family: var(--mono); font-weight: 700; font-size: 0.9rem; }
+    .logo-sub { font-size: 0.72rem; color: var(--text-muted); font-weight: 500; display: flex; align-items: center; gap: 6px; }
+    .dot-live { width: 7px; height: 7px; background: var(--success); border-radius: 50%; display: inline-block; box-shadow: 0 0 0 2px var(--success-light); }
+    nav ul { display: flex; list-style: none; gap: 24px; font-size: 0.88rem; font-weight: 600; color: var(--text-muted); }
+    nav a:hover { color: var(--primary); }
+    .nav-actions { display: flex; gap: 10px; align-items: center; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border-radius: var(--radius-sm); font-size: 0.85rem; font-weight: 600; transition: all 0.2s; }
+    .btn-primary { background: var(--primary); color: #fff; }
+    .btn-primary:hover { background: var(--primary-hover); }
+    .btn-outline { background: #fff; border: 1px solid var(--border); color: var(--text); }
+    .btn-outline:hover { background: #f1f5f9; border-color: var(--border-dark); }
+    .btn-dark { background: var(--dark); color: #fff; }
+    .btn-dark:hover { background: #1e293b; }
+    .btn-success { background: #059669; color: #fff; }
+    .btn-success:hover { background: #047857; }
+    .mobile-toggle { display: none; background: none; font-size: 1.5rem; color: var(--text); }
+
+    /* Hero */
+    .hero { padding: 48px 0 56px; border-bottom: 1px solid var(--border); background: radial-gradient(circle at 50% 0%, rgba(2,132,199,0.06) 0%, transparent 70%); }
+    .hero-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; align-items: start; }
+    .pill-status { display: inline-flex; align-items: center; gap: 8px; padding: 4px 12px; background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 999px; font-size: 0.75rem; font-weight: 700; color: #065f46; margin-bottom: 14px; }
+    .hero h1 { font-size: 2.8rem; font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 12px; color: var(--dark); }
+    .hero-sub { font-size: 1.15rem; font-weight: 600; color: var(--primary-dark); margin-bottom: 16px; }
+    .hero-desc { font-size: 0.98rem; color: #334155; line-height: 1.65; margin-bottom: 24px; max-width: 650px; }
+    .contact-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; font-size: 0.85rem; }
+    .chip { display: flex; align-items: center; gap: 6px; padding: 7px 12px; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text); }
+    .chip a:hover { color: var(--primary); text-decoration: underline; }
+    .copy-mini { background: none; color: var(--text-muted); font-size: 0.75rem; padding: 2px 4px; border-radius: 4px; margin-left: 4px; }
+    .copy-mini:hover { background: var(--border); color: var(--dark); }
+    .hero-buttons { display: flex; flex-wrap: wrap; gap: 12px; }
+
+    /* Target Roles Card */
+    .roles-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
+    .card-title { font-size: 0.78rem; text-transform: uppercase; font-family: var(--mono); color: var(--text-muted); font-weight: 700; letter-spacing: 0.05em; margin-bottom: 16px; display: flex; justify-content: space-between; align-items: center; }
+    .role-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
+    .role-item { display: flex; align-items: center; gap: 10px; padding: 9px 12px; background: #f8fafc; border: 1px solid #f1f5f9; border-radius: var(--radius-sm); font-size: 0.88rem; font-weight: 600; color: var(--text); }
+    .role-item::before { content: "✓"; color: var(--primary); font-weight: 800; }
+    .stats-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 36px; }
+    .stat-box { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 16px; }
+    .stat-val { font-size: 1.6rem; font-weight: 800; color: var(--primary); font-family: var(--mono); line-height: 1; margin-bottom: 4px; }
+    .stat-lbl { font-size: 0.82rem; font-weight: 700; color: var(--text); }
+    .stat-sub { font-size: 0.72rem; color: var(--text-muted); }
+
+    /* Section styles */
+    section { padding: 64px 0; border-bottom: 1px solid var(--border); }
+    .sec-header { margin-bottom: 36px; }
+    .sec-tag { font-size: 0.75rem; text-transform: uppercase; font-family: var(--mono); color: var(--primary); font-weight: 700; letter-spacing: 0.06em; margin-bottom: 6px; }
+    .sec-title { font-size: 1.9rem; font-weight: 800; letter-spacing: -0.02em; color: var(--dark); }
+    .sec-desc { font-size: 0.95rem; color: var(--text-muted); margin-top: 6px; max-width: 680px; }
+
+    /* Core Competencies */
+    .grid-competencies { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+    .comp-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px; transition: transform 0.15s, border-color 0.15s; }
+    .comp-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+    .comp-title { font-size: 0.95rem; font-weight: 700; margin-bottom: 6px; color: var(--dark); }
+    .comp-desc { font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; }
+
+    /* Experience */
+    .filter-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+    .tab-btn { padding: 6px 14px; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-sm); font-size: 0.82rem; font-weight: 600; color: var(--text-muted); }
+    .tab-btn.active { background: var(--dark); color: #fff; border-color: var(--dark); }
+    .exp-stack { display: flex; flex-direction: column; gap: 20px; }
+    .exp-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.02); }
+    .exp-card.current { border-color: #7dd3fc; box-shadow: 0 0 0 1px #bae6fd; }
+    .exp-top { padding: 20px 24px; background: #f8fafc; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px; }
+    .exp-role { font-size: 1.15rem; font-weight: 800; color: var(--dark); }
+    .exp-company { font-size: 0.92rem; font-weight: 700; color: var(--primary); margin-top: 2px; }
+    .exp-meta { font-family: var(--mono); font-size: 0.8rem; background: #fff; padding: 4px 10px; border: 1px solid var(--border); border-radius: 6px; color: #475569; }
+    .exp-body { padding: 24px; }
+    .exp-highlight { background: #f0f9ff; border-left: 3px solid var(--primary); padding: 10px 14px; font-size: 0.85rem; color: #0369a1; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; margin-bottom: 16px; font-weight: 500; }
+    .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.9rem; color: #334155; margin-bottom: 18px; }
+    .exp-bullets li { position: relative; padding-left: 20px; line-height: 1.55; }
+    .exp-bullets li::before { content: "•"; position: absolute; left: 4px; color: var(--primary); font-weight: 800; font-size: 1.1rem; }
+    .tech-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tech-tag { font-size: 0.75rem; background: #f1f5f9; padding: 4px 10px; border-radius: 6px; color: #475569; font-weight: 600; }
+
+    /* Skills Grid */
+    .skills-search-bar { display: flex; gap: 12px; margin-bottom: 24px; }
+    .search-input { flex: 1; max-width: 400px; padding: 9px 14px; background: #fff; border: 1px solid var(--border); border-radius: var(--radius-sm); font-size: 0.88rem; font-family: inherit; }
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .skill-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 22px; }
+    .skill-header { font-size: 1rem; font-weight: 800; color: var(--dark); margin-bottom: 4px; display: flex; justify-content: space-between; align-items: center; }
+    .skill-sub { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 14px; }
+    .skill-items { display: flex; flex-wrap: wrap; gap: 8px; }
+    .skill-pill { display: flex; align-items: center; gap: 6px; background: #f8fafc; border: 1px solid var(--border); padding: 5px 10px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; }
+    .skill-lvl { font-size: 0.65rem; font-family: var(--mono); text-transform: uppercase; background: var(--primary-light); color: var(--primary-dark); padding: 1px 5px; border-radius: 4px; }
+
+    /* Credentials & Education */
+    .cred-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+    .cred-item { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px; margin-bottom: 14px; }
+    .cred-badge { display: inline-block; font-family: var(--mono); font-size: 0.7rem; font-weight: 700; background: #e0f2fe; color: #0369a1; padding: 2px 8px; border-radius: 4px; margin-bottom: 8px; }
+    .cred-title { font-size: 1rem; font-weight: 800; color: var(--dark); }
+    .cred-issuer { font-size: 0.85rem; font-weight: 600; color: #475569; margin-top: 2px; }
+    .cred-loc { font-size: 0.78rem; color: var(--text-muted); margin-top: 2px; }
+
+    /* Case Highlights */
+    .case-container { background: var(--dark); color: #fff; border-radius: var(--radius-lg); padding: 32px; box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
+    .case-tabs { display: flex; gap: 8px; margin-bottom: 24px; border-bottom: 1px solid #334155; padding-bottom: 14px; flex-wrap: wrap; }
+    .case-btn { padding: 8px 16px; background: #1e293b; color: #94a3b8; border-radius: var(--radius-sm); font-size: 0.82rem; font-weight: 600; }
+    .case-btn.active { background: var(--primary); color: #fff; }
+    .case-title { font-size: 1.3rem; font-weight: 800; margin-bottom: 12px; color: #f8fafc; }
+    .case-scenario { background: rgba(255,255,255,0.06); padding: 14px; border-radius: var(--radius-sm); font-size: 0.88rem; color: #cbd5e1; margin-bottom: 16px; }
+    .case-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+    .case-box { background: #1e293b; border: 1px solid #334155; border-radius: var(--radius-sm); padding: 16px; }
+    .case-box-title { font-size: 0.75rem; font-family: var(--mono); text-transform: uppercase; color: #38bdf8; font-weight: 700; margin-bottom: 6px; }
+    .case-box p { font-size: 0.85rem; color: #e2e8f0; line-height: 1.5; }
+
+    /* Contact & Recruiter */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 36px; }
+    .contact-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 18px; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; }
+    .contact-lbl { font-size: 0.72rem; text-transform: uppercase; font-family: var(--mono); color: var(--text-muted); font-weight: 700; }
+    .contact-val { font-size: 0.95rem; font-weight: 700; color: var(--dark); margin-top: 2px; }
+    .composer { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 28px; }
+    .form-group { margin-bottom: 14px; }
+    .form-label { display: block; font-size: 0.8rem; font-weight: 700; margin-bottom: 6px; color: #334155; }
+    .form-control { width: 100%; padding: 10px 14px; background: #f8fafc; border: 1px solid var(--border); border-radius: var(--radius-sm); font-family: inherit; font-size: 0.88rem; }
+    .form-control:focus { outline: none; border-color: var(--primary); background: #fff; }
+    .form-actions { display: flex; gap: 12px; margin-top: 18px; flex-wrap: wrap; }
+
+    /* Footer */
+    footer { background: #0b1120; color: #94a3b8; padding: 48px 0 32px; font-size: 0.85rem; }
+    .footer-wrap { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; border-bottom: 1px solid #1e293b; padding-bottom: 24px; margin-bottom: 20px; }
+    .footer-links { display: flex; gap: 18px; font-weight: 600; }
+    .footer-links a:hover { color: #fff; }
+
+    /* Modal (Resume Preview & Download Hub) */
+    .modal-backdrop { display: none; position: fixed; inset: 0; background: rgba(15,23,42,0.75); backdrop-filter: blur(4px); z-index: 100; align-items: center; justify-content: center; padding: 16px; }
+    .modal-backdrop.active { display: flex; }
+    .modal-box { background: #fff; width: 100%; max-width: 850px; max-height: 92vh; border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 20px 40px rgba(0,0,0,0.25); }
+    .modal-top { background: var(--dark); color: #fff; padding: 14px 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .modal-top-actions { display: flex; gap: 8px; align-items: center; }
+    .modal-content { overflow-y: auto; padding: 36px 40px; font-size: 0.88rem; color: #1e293b; }
+    .resume-sheet { max-width: 760px; margin: 0 auto; background: #fff; }
+    .resume-hd { text-align: center; border-bottom: 2px solid #0f172a; padding-bottom: 14px; margin-bottom: 18px; }
+    .resume-hd h2 { font-size: 1.6rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: #0f172a; }
+    .resume-hd .r-sub { font-size: 0.82rem; font-weight: 700; text-transform: uppercase; color: #475569; margin: 4px 0 6px; }
+    .resume-hd .r-meta { font-size: 0.8rem; color: #64748b; }
+    .r-sec { margin-bottom: 16px; }
+    .r-sec-t { font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: #0f172a; border-bottom: 1px solid #cbd5e1; padding-bottom: 3px; margin-bottom: 8px; font-family: var(--mono); }
+    .r-p { font-size: 0.84rem; text-align: justify; line-height: 1.5; color: #334155; }
+    .r-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 20px; font-size: 0.82rem; font-weight: 600; }
+    .r-exp { margin-bottom: 12px; }
+    .r-exp-head { display: flex; justify-content: space-between; font-weight: 700; font-size: 0.88rem; margin-bottom: 3px; }
+    .r-bullets { padding-left: 18px; font-size: 0.82rem; line-height: 1.45; color: #334155; }
+    .modal-foot { background: #f8fafc; border-top: 1px solid var(--border); padding: 12px 24px; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--text-muted); }
+
+    /* Toast Notification */
+    .toast { position: fixed; bottom: 24px; right: 24px; background: #0f172a; color: #fff; padding: 12px 20px; border-radius: var(--radius-sm); font-size: 0.85rem; font-weight: 600; box-shadow: 0 10px 25px rgba(0,0,0,0.2); z-index: 200; display: none; align-items: center; gap: 10px; border-left: 4px solid var(--success); }
+    .toast.show { display: flex; animation: slideIn 0.2s ease-out; }
+    @keyframes slideIn { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero-grid, .cred-grid, .contact-grid, .case-grid { grid-template-columns: 1fr; }
+      .stats-strip { grid-template-columns: repeat(2, 1fr); }
+      nav ul { display: none; }
+      .mobile-toggle { display: block; }
+      .mobile-nav { display: none; background: #fff; border-bottom: 1px solid var(--border); padding: 16px 20px; }
+      .mobile-nav.open { display: block; }
+      .mobile-nav a { display: block; padding: 10px 0; font-weight: 600; color: #334155; border-bottom: 1px solid #f1f5f9; }
+      .modal-content { padding: 20px; }
+    }
+
+    @media print {
+      header, footer, .hero-buttons, .filter-tabs, .modal-top, .modal-foot, .no-print { display: none !important; }
+      body { background: #fff !important; color: #000 !important; }
+      .modal-backdrop { position: static !important; background: transparent !important; display: block !important; padding: 0 !important; }
+      .modal-box { max-width: 100% !important; box-shadow: none !important; border: none !important; }
+      .modal-content { padding: 0 !important; overflow: visible !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header>
+    <div class="container nav-wrap">
+      <a href="#overview" class="logo">
+        <div class="logo-badge">HS</div>
+        <div>
+          <div>Himanshu Sharma</div>
+          <div class="logo-sub"><span class="dot-live"></span> IT Support Engineer</div>
+        </div>
+      </a>
+
+      <nav>
+        <ul>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#competencies">Competencies</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#credentials">Education & Certs</a></li>
+          <li><a href="#cases">Case Highlights</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button onclick="openResumeModal()" class="btn btn-primary">
+          📄 View / Download CV
+        </button>
+        <button onclick="toggleMobileNav()" class="mobile-toggle" aria-label="Toggle Menu">☰</button>
+      </div>
+    </div>
+    
+    <!-- Mobile dropdown menu -->
+    <div id="mobileNav" class="mobile-nav">
+      <a href="#overview" onclick="toggleMobileNav()">Overview</a>
+      <a href="#competencies" onclick="toggleMobileNav()">Competencies</a>
+      <a href="#experience" onclick="toggleMobileNav()">Experience</a>
+      <a href="#skills" onclick="toggleMobileNav()">Skills Matrix</a>
+      <a href="#credentials" onclick="toggleMobileNav()">Education & Certs</a>
+      <a href="#cases" onclick="toggleMobileNav()">Incident Scenarios</a>
+      <a href="#contact" onclick="toggleMobileNav()">Contact Me</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="overview">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="pill-status">
+            <span class="dot-live"></span> Actively Open to Opportunities • Haridwar & NCR
+          </div>
+          <h1>Himanshu Sharma</h1>
+          <div class="hero-sub">IT Support Engineer | Application Support | System & Network Support</div>
+          <p class="hero-desc">
+            IT professional with <strong>6+ years of experience</strong> across Technical Support, Salesforce Application Support, hardware troubleshooting, network operations, and end-user support. MCA qualified with Cisco CCNA credentials and a proven track record resolving business-critical discrepancies and minimizing downtime.
+          </p>
+
+          <div class="contact-chips">
+            <div class="chip">
+              📍 Haridwar, India
+            </div>
+            <div class="chip">
+              📞 <a href="tel:+918171589855">+91 8171589855</a>
+              <button onclick="copyText('+918171589855', 'Phone copied!')" class="copy-mini" title="Copy Phone">Copy</button>
+            </div>
+            <div class="chip">
+              ✉️ <a href="mailto:himanshusharma16feb@gmail.com">himanshusharma16feb@gmail.com</a>
+              <button onclick="copyText('himanshusharma16feb@gmail.com', 'Email copied!')" class="copy-mini" title="Copy Email">Copy</button>
+            </div>
+          </div>
+
+          <div class="hero-buttons">
+            <button onclick="openResumeModal()" class="btn btn-primary">
+              📥 Download Resume (PDF/Word)
+            </button>
+            <a href="https://wa.me/918171589855?text=Hi%20Himanshu,%20I%20reviewed%20your%20profile%20and%20would%20like%20to%20connect%20regarding%20an%20opportunity." target="_blank" rel="noopener" class="btn btn-success">
+              💬 Chat on WhatsApp
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              ✉️ Send Email
+            </a>
+          </div>
+        </div>
+
+        <!-- Target Roles Card -->
+        <div class="roles-card">
+          <div class="card-title">
+            <span>Target Positions</span>
+            <span style="color: var(--primary); font-size: 0.72rem;">Full-Time Roles</span>
+          </div>
+          <div class="role-list">
+            <div class="role-item">IT Support Engineer</div>
+            <div class="role-item">Application Support Engineer</div>
+            <div class="role-item">System Administrator</div>
+            <div class="role-item">Technical Support Engineer</div>
+            <div class="role-item">Network Support Engineer</div>
+          </div>
+          <div style="font-size: 0.75rem; text-transform: uppercase; font-family: var(--mono); color: var(--text-muted); font-weight: 700; margin-bottom: 8px;">
+            Professional Strengths
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+            <span class="tech-tag">Problem Solving</span>
+            <span class="tech-tag">Analytical Thinking</span>
+            <span class="tech-tag">User Communication</span>
+            <span class="tech-tag">Team Collaboration</span>
+            <span class="tech-tag">Customer-Centric</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats Strip -->
+      <div class="stats-strip">
+        <div class="stat-box">
+          <div class="stat-val">6+ Years</div>
+          <div class="stat-lbl">Industry Experience</div>
+          <div class="stat-sub">Enterprise IT & App Support</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-val">4 Firms</div>
+          <div class="stat-lbl">Reputed Track Record</div>
+          <div class="stat-sub">Bharuwa, Concentrix, TP, Tata</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-val">MCA</div>
+          <div class="stat-lbl">Post-Graduate Degree</div>
+          <div class="stat-sub">Chandigarh University</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-val">CCNA</div>
+          <div class="stat-lbl">Cisco Certified</div>
+          <div class="stat-sub">Routing, Switching & LAN/WAN</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Competencies -->
+  <section id="competencies">
+    <div class="container">
+      <div class="sec-header">
+        <div class="sec-tag">Skill Foundations</div>
+        <h2 class="sec-title">Core Competencies</h2>
+        <p class="sec-desc">Demonstrated strengths across enterprise application workflows, hardware diagnostics, and network uptime maintenance.</p>
+      </div>
+
+      <div class="grid-competencies">
+        <div class="comp-card">
+          <div class="comp-title">Salesforce Application Support</div>
+          <div class="comp-desc">Salesforce CRM workflows, user access rights, beat-route GPS mapping, and distributor database administration.</div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-title">IT Helpdesk & End-User Support</div>
+          <div class="comp-desc">L1 & L2 ticket triage, service-level agreement (SLA) management, and multi-channel technical assistance.</div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-title">Incident Troubleshooting</div>
+          <div class="comp-desc">Root-cause identification, issue lifecycle coordination, and minimizing business-critical user disruption.</div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-title">Remote Support & Training</div>
+          <div class="comp-desc">Google Meet collaboration, remote desktop troubleshooting, and onboarding field staff on application updates.</div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-title">Hardware & Windows Support</div>
+          <div class="comp-desc">Dell desktop, laptop, and server diagnostics, part replacement logistics, and Windows OS configuration.</div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-title">LAN / WAN & Network Support</div>
+          <div class="comp-desc">IP addressing, routers, switches, firewalls, Wi-Fi connectivity, and secure VPN tunnel access.</div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-title">User Onboarding & SOPs</div>
+          <div class="comp-desc">Conducting interactive training sessions and authoring standard operating procedures for field-sales teams.</div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-title">Issue Documentation & KB</div>
+          <div class="comp-desc">Contributing to team knowledge-base articles, troubleshooting guides, and incident resolution archives.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Professional Experience -->
+  <section id="experience" style="background: #f1f5f9;">
+    <div class="container">
+      <div class="sec-header">
+        <div class="sec-tag">Career History</div>
+        <h2 class="sec-title">Professional Experience</h2>
+        <p class="sec-desc">6+ years of progressive experience delivering dependable front-line and application support across leading technology organizations.</p>
+      </div>
+
+      <div class="filter-tabs">
+        <button onclick="filterExperience('all', this)" class="tab-btn active">All Experience (4)</button>
+        <button onclick="filterExperience('app', this)" class="tab-btn">Application Support</button>
+        <button onclick="filterExperience('hardware', this)" class="tab-btn">Hardware & Systems</button>
+        <button onclick="filterExperience('network', this)" class="tab-btn">Network Support</button>
+      </div>
+
+      <div class="exp-stack">
+        <!-- Bharuwa Solutions -->
+        <div class="exp-card current" data-cat="app">
+          <div class="exp-top">
+            <div>
+              <div class="exp-role">Support Engineer</div>
+              <div class="exp-company">Bharuwa Solutions Private Limited</div>
+            </div>
+            <div class="exp-meta">Jun 2023 – Present • Haridwar, India</div>
+          </div>
+          <div class="exp-body">
+            <div class="exp-highlight">
+              ⭐ <strong>Key Impact:</strong> Streamlined daily field-sales reporting for 100+ reps by resolving recurring beat-route GPS tracking and stock sync bottlenecks.
+            </div>
+            <ul class="exp-bullets">
+              <li>Provide application and technical support to the sales team using Salesforce and connected business workflows.</li>
+              <li>Troubleshoot beat-route mapping, location and tracking issues to support accurate field-sales reporting.</li>
+              <li>Resolve stock, attendance and user-access discrepancies and coordinate issues through to closure.</li>
+              <li>Create and maintain new shop and distributor records in Salesforce based on business requirements.</li>
+              <li>Train new and existing users on application updates, features, workflows and best practices.</li>
+              <li>Provide remote support through Google Meet and other collaboration tools, reducing disruption to field operations.</li>
+              <li>Analyze recurring user issues and feedback, coordinate with internal teams, and recommend application/process improvements.</li>
+            </ul>
+            <div class="tech-tags">
+              <span class="tech-tag">Salesforce CRM</span>
+              <span class="tech-tag">Field-Sales App</span>
+              <span class="tech-tag">Beat-Route GPS Mapping</span>
+              <span class="tech-tag">Google Meet</span>
+              <span class="tech-tag">User Access Control</span>
+              <span class="tech-tag">SOP Training</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Concentrix -->
+        <div class="exp-card" data-cat="hardware">
+          <div class="exp-top">
+            <div>
+              <div class="exp-role">Technical Support Associate</div>
+              <div class="exp-company">Concentrix</div>
+            </div>
+            <div class="exp-meta">Mar 2022 – Feb 2023 • Gurugram, India</div>
+          </div>
+          <div class="exp-body">
+            <div class="exp-highlight">
+              ⭐ <strong>Key Impact:</strong> Maintained 95%+ first-contact diagnostic resolution on Dell enterprise desktop, laptop, and server cases.
+            </div>
+            <ul class="exp-bullets">
+              <li>Provided remote technical support and troubleshooting for Dell desktops, laptops and servers.</li>
+              <li>Diagnosed hardware issues, guided users through resolution steps, and minimized service downtime.</li>
+              <li>Coordinated escalations with engineering and development teams for complex technical problems.</li>
+              <li>Managed hardware repair/replacement workflows and maintained accurate case documentation.</li>
+              <li>Contributed to internal knowledge-base articles and training materials to improve team efficiency.</li>
+            </ul>
+            <div class="tech-tags">
+              <span class="tech-tag">Dell Hardware</span>
+              <span class="tech-tag">Dell PowerEdge Servers</span>
+              <span class="tech-tag">Component Diagnostics</span>
+              <span class="tech-tag">Part Logistics</span>
+              <span class="tech-tag">Knowledge Base</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Teleperformance -->
+        <div class="exp-card" data-cat="hardware app">
+          <div class="exp-top">
+            <div>
+              <div class="exp-role">Technical Support Executive (TSE)</div>
+              <div class="exp-company">Teleperformance India</div>
+            </div>
+            <div class="exp-meta">Aug 2015 – Jul 2017 • Jaipur, India</div>
+          </div>
+          <div class="exp-body">
+            <ul class="exp-bullets">
+              <li>Delivered technical support for Microsoft operating systems, applications, hardware and peripherals through phone, email and remote assistance.</li>
+              <li>Diagnosed complex technical issues and guided customers through installation, upgrades, configuration and troubleshooting.</li>
+              <li>Worked with Microsoft internal support teams on escalated cases and documented troubleshooting and resolutions.</li>
+              <li>Created support documentation and knowledge-base content to improve resolution efficiency and self-service.</li>
+              <li>Provided mentoring and technical guidance to new team members.</li>
+            </ul>
+            <div class="tech-tags">
+              <span class="tech-tag">Windows OS</span>
+              <span class="tech-tag">Microsoft Applications</span>
+              <span class="tech-tag">Peripheral Diagnostics</span>
+              <span class="tech-tag">Remote Assistance</span>
+              <span class="tech-tag">Mentoring</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tata BSS -->
+        <div class="exp-card" data-cat="network">
+          <div class="exp-top">
+            <div>
+              <div class="exp-role">Technical Support Executive</div>
+              <div class="exp-company">Tata Business Support Service Limited</div>
+            </div>
+            <div class="exp-meta">Jun 2014 – Dec 2014 • Noida, India</div>
+          </div>
+          <div class="exp-body">
+            <ul class="exp-bullets">
+              <li>Provided first-level technical support for network connectivity, access and user issues.</li>
+              <li>Performed basic monitoring and troubleshooting of routers, switches and firewalls and escalated complex issues.</li>
+              <li>Supported VPN and Wi-Fi connectivity issues and guided users through basic network configurations.</li>
+              <li>Documented incidents, troubleshooting steps and resolutions while collaborating with senior engineers.</li>
+            </ul>
+            <div class="tech-tags">
+              <span class="tech-tag">Routers & Switches</span>
+              <span class="tech-tag">Firewalls</span>
+              <span class="tech-tag">VPN Tunnels</span>
+              <span class="tech-tag">Wi-Fi Configuration</span>
+              <span class="tech-tag">IP Addressing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Matrix -->
+  <section id="skills">
+    <div class="container">
+      <div class="sec-header">
+        <div class="sec-tag">Technical Arsenal</div>
+        <h2 class="sec-title">Skills & Proficiencies</h2>
+        <p class="sec-desc">Comprehensive matrix categorized across business applications, enterprise network infrastructure, and computer hardware.</p>
+      </div>
+
+      <div class="skills-search-bar">
+        <input type="text" id="skillSearch" class="search-input" placeholder="🔍 Search any skill, tool or protocol..." oninput="searchSkills()">
+      </div>
+
+      <div class="skills-grid" id="skillsGrid">
+        <!-- Application Support -->
+        <div class="skill-card">
+          <div class="skill-header">Application Support</div>
+          <div class="skill-sub">Salesforce administration & field-sales workflows</div>
+          <div class="skill-items">
+            <div class="skill-pill"><span>Salesforce CRM</span><span class="skill-lvl">Expert</span></div>
+            <div class="skill-pill"><span>Application Troubleshooting</span><span class="skill-lvl">Expert</span></div>
+            <div class="skill-pill"><span>Beat-Route Mapping</span><span class="skill-lvl">Expert</span></div>
+            <div class="skill-pill"><span>User Access Management</span><span class="skill-lvl">Expert</span></div>
+            <div class="skill-pill"><span>Workflow Assistance</span><span class="skill-lvl">Advanced</span></div>
+            <div class="skill-pill"><span>Attendance Sync</span><span class="skill-lvl">Advanced</span></div>
+            <div class="skill-pill"><span>Distributor Database</span><span class="skill-lvl">Advanced</span></div>
+          </div>
+        </div>
+
+        <!-- Networking -->
+        <div class="skill-card">
+          <div class="skill-header">Networking & Infrastructure</div>
+          <div class="skill-sub">LAN/WAN, routing, subnets and security</div>
+          <div class="skill-items">
+            <div class="skill-pill"><span>LAN / WAN</span><span class="skill-lvl">Advanced</span></div>
+            <div class="skill-pill"><span>IP Addressing & Subnetting</span><span class="skill-lvl">Advanced</span></div>
+            <div class="skill-pill"><span>Network Protocols</span><span class="skill-lvl">Advanced</span></div>
+            <div class="skill-pill"><span>Routers & Switches</span><span class="skill-lvl">Advanced</span></div>
+            <div class="skill-pill"><span>VPN Configuration</span><span class="skill-lvl">Advanced</span></div>
+            <div class="skill-pill"><span>Firewalls</span><span class="skill-lvl">Proficient</span></div>
+            <div class="skill-pill"><span>Wi-Fi Network Setup</span><span class="skill-lvl">Advanced</span></div>
+          </div>
+        </div>
+
+        <!-- Hardware & OS -->
+        <div class="skill-card">
+          <div class="skill-header">Hardware & Operating Systems</div>
+          <div class="skill-sub">Computer repair, server hardware, and OS maintenance</div>
+          <div class="skill-items">
+            <div class="skill-pill"><span>PC & Laptop Hardware</span><span class="skill-lvl">Expert</span></div>
+            <div class="skill-pill"><span>Dell Servers / PowerEdge</span><span class="skill-lvl">Advanced</span></div>
+            <div class="skill-pill"><span>Peripherals & Devices</span><span class="skill-lvl">Expert</span></div>
+            <div class="skill-pill"><span>Hardware Diagnostics</span><span class="skill-lvl">Expert</span></div>
+            <div class="skill-pill"><span>Windows OS (10, 11, Server)</span><span class="skill-lvl">Expert</span></div>
+            <div class="skill-pill"><span>Installation & Maintenance</span><span class="skill-lvl">Advanced</span></div>
+            <div class="skill-pill"><span>BIOS / Firmware Updates</span><span class="skill-lvl">Advanced</span></div>
+          </div>
+        </div>
+
+        <!-- Support Tools -->
+        <div class="skill-card">
+          <div class="skill-header">Support Tools & Operations</div>
+          <div class="skill-sub">Remote collaboration & ticketing protocols</div>
+          <div class="skill-items">
+            <div class="skill-pill"><span>Remote Troubleshooting</span><span class="skill-lvl">Expert</span></div>
+            <div class="skill-pill"><span>Google Meet Collaboration</span><span class="skill-lvl">Expert</span></div>
+            <div class="skill-pill"><span>Ticket & Case Documentation</span><span class="skill-lvl">Expert</span></div>
+            <div class="skill-pill"><span>Knowledge-Base Support</span><span class="skill-lvl">Advanced</span></div>
+            <div class="skill-pill"><span>Root Cause Analysis</span><span class="skill-lvl">Advanced</span></div>
+            <div class="skill-pill"><span>SLA Adherence</span><span class="skill-lvl">Advanced</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education & Certifications -->
+  <section id="credentials" style="background: #f8fafc;">
+    <div class="container">
+      <div class="cred-grid">
+        <!-- Certifications -->
+        <div>
+          <div class="sec-tag">Accreditations</div>
+          <h2 style="font-size: 1.6rem; font-weight: 800; margin-bottom: 20px;">Professional Certifications</h2>
+
+          <div class="cred-item">
+            <div class="cred-badge">CCNA Certified</div>
+            <div class="cred-title">Cisco Certified Network Associate (CCNA)</div>
+            <div class="cred-issuer">IIHT, Vikaspuri, New Delhi</div>
+            <div class="cred-loc">📍 New Delhi, India</div>
+            <div style="font-size: 0.8rem; color: #64748b; margin-top: 8px;">
+              Skills: Network Fundamentals, IP Connectivity, Routing & Switching, Security Basics.
+            </div>
+          </div>
+
+          <div class="cred-item">
+            <div class="cred-badge">Hardware Specialist</div>
+            <div class="cred-title">Computer Hardware Specialist Certification</div>
+            <div class="cred-issuer">JET Institute, Saharanpur</div>
+            <div class="cred-loc">📍 Saharanpur, India</div>
+            <div style="font-size: 0.8rem; color: #64748b; margin-top: 8px;">
+              Skills: Component Diagnostics, Board Testing, Power Supply Analysis, Repair Logistics.
+            </div>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div>
+          <div class="sec-tag">Academic Background</div>
+          <h2 style="font-size: 1.6rem; font-weight: 800; margin-bottom: 20px;">Higher Education</h2>
+
+          <div class="cred-item">
+            <div class="cred-title">Master of Computer Applications (MCA)</div>
+            <div class="cred-issuer">Chandigarh University, India</div>
+            <div class="cred-loc">Post-Graduate Degree</div>
+            <div style="font-size: 0.82rem; color: #475569; margin-top: 6px;">
+              Advanced foundations in enterprise software, databases, networking, and system architecture.
+            </div>
+          </div>
+
+          <div class="cred-item">
+            <div class="cred-title">Post Graduate Diploma in Computer Hardware & Networking</div>
+            <div class="cred-issuer">UP Board of Technical Education, India</div>
+            <div class="cred-loc">Post-Graduate Diploma</div>
+            <div style="font-size: 0.82rem; color: #475569; margin-top: 6px;">
+              Specialized engineering study covering microprocessors, network topologies, and maintenance.
+            </div>
+          </div>
+
+          <div class="cred-item">
+            <div class="cred-title">Bachelor of Science (B.Sc.)</div>
+            <div class="cred-issuer">CCS University, Meerut, India</div>
+            <div class="cred-loc">Undergraduate Degree</div>
+            <div style="font-size: 0.82rem; color: #475569; margin-top: 6px;">
+              Scientific and mathematical foundation fostering methodical problem analysis and logic.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Incident Scenarios / Case Studies -->
+  <section id="cases">
+    <div class="container">
+      <div class="sec-header">
+        <div class="sec-tag">Technical Triage</div>
+        <h2 class="sec-title">Real-World Incident Scenarios</h2>
+        <p class="sec-desc">How Himanshu applies methodical root-cause analysis (RCA) to restore critical enterprise workflows.</p>
+      </div>
+
+      <div class="case-container">
+        <div class="case-tabs">
+          <button onclick="showCase(0, this)" class="case-btn active">Case 01: Salesforce GPS Mapping</button>
+          <button onclick="showCase(1, this)" class="case-btn">Case 02: Enterprise Server Diagnostics</button>
+          <button onclick="showCase(2, this)" class="case-btn">Case 03: Branch VPN Recovery</button>
+        </div>
+
+        <div id="caseContent">
+          <!-- Dynamically swapped by JavaScript -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Direct Contact Section -->
+  <section id="contact" style="background: #f8fafc;">
+    <div class="container">
+      <div class="sec-header">
+        <div class="sec-tag">Connect With Me</div>
+        <h2 class="sec-title">Contact Himanshu</h2>
+        <p class="sec-desc">Available for IT Support Engineer, Application Support, and Systems Administrator positions.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div>
+          <div class="contact-card">
+            <div>
+              <div class="contact-lbl">Phone Number</div>
+              <div class="contact-val"><a href="tel:+918171589855">+91 8171589855</a></div>
+            </div>
+            <button onclick="copyText('+918171589855', 'Phone number copied!')" class="btn btn-outline" style="padding: 6px 12px; font-size: 0.78rem;">Copy</button>
+          </div>
+
+          <div class="contact-card">
+            <div>
+              <div class="contact-lbl">Email Address</div>
+              <div class="contact-val"><a href="mailto:himanshusharma16feb@gmail.com">himanshusharma16feb@gmail.com</a></div>
+            </div>
+            <button onclick="copyText('himanshusharma16feb@gmail.com', 'Email copied!')" class="btn btn-outline" style="padding: 6px 12px; font-size: 0.78rem;">Copy</button>
+          </div>
+
+          <div class="contact-card" style="background: #ecfdf5; border-color: #a7f3d0;">
+            <div>
+              <div class="contact-lbl" style="color: #065f46;">Instant Messaging</div>
+              <div class="contact-val" style="color: #064e3b;">WhatsApp Direct</div>
+            </div>
+            <a href="https://wa.me/918171589855?text=Hi%20Himanshu,%20I%20reviewed%20your%20resume%20and%20would%20like%20to%20discuss%20a%20role." target="_blank" rel="noopener" class="btn btn-success" style="padding: 6px 12px; font-size: 0.78rem;">
+              Chat Now
+            </a>
+          </div>
+
+          <div class="contact-card">
+            <div>
+              <div class="contact-lbl">Location & Mobility</div>
+              <div class="contact-val">Haridwar, Uttarakhand, India</div>
+              <div style="font-size: 0.78rem; color: #64748b; margin-top: 4px;">
+                Open to Haridwar, NCR (Noida/Gurugram/Delhi), Remote, or Relocation.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recruiter Quick Form -->
+        <div class="composer">
+          <h3 style="font-size: 1.15rem; font-weight: 800; margin-bottom: 4px;">Recruiter Quick Connect</h3>
+          <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 18px;">
+            Send an interview invite or opportunity note directly to Himanshu.
+          </p>
+
+          <form onsubmit="handleRecruiterSubmit(event)">
+            <div class="form-group">
+              <label class="form-label">Your Name & Organization</label>
+              <input type="text" id="recruiterName" class="form-control" placeholder="e.g. Priya Sharma - HR Talent Lead" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Opportunity / Role Type</label>
+              <select id="recruiterRole" class="form-control">
+                <option value="IT Support Engineer">IT Support Engineer</option>
+                <option value="Application Support Engineer">Application Support Engineer</option>
+                <option value="System Administrator">System Administrator</option>
+                <option value="Network Support Engineer">Network Support Engineer</option>
+                <option value="Technical Consultation">Other IT Inquiry</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Message / Job Description Summary</label>
+              <textarea id="recruiterMsg" class="form-control" rows="3" placeholder="Briefly share the location, shift schedule, or job description..."></textarea>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">
+                ✉️ Send via Email App
+              </button>
+              <button type="button" onclick="copyRecruiterDraft()" class="btn btn-outline">
+                📋 Copy Message Draft
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-wrap">
+        <div>
+          <div style="font-weight: 800; font-size: 1.1rem; color: #fff;">Himanshu Sharma</div>
+          <div style="font-size: 0.78rem; color: #64748b;">IT Support Engineer | Application Support | System & Network Support</div>
+        </div>
+        <div class="footer-links">
+          <a href="#overview">Overview</a>
+          <a href="#experience">Experience</a>
+          <a href="#skills">Skills</a>
+          <a href="#credentials">Certs</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.75rem; color: #475569; flex-wrap: gap;">
+        <div>Haridwar, India • +91 8171589855 • himanshusharma16feb@gmail.com</div>
+        <div>Standalone Responsive HTML Portfolio</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Resume Preview & Download Modal -->
+  <div id="resumeModal" class="modal-backdrop" onclick="closeModalOnBackdrop(event)">
+    <div class="modal-box" onclick="event.stopPropagation()">
+      <!-- Modal Header Bar -->
+      <div class="modal-top">
+        <div>
+          <div style="font-weight: 800; font-size: 0.95rem;">Himanshu Sharma • Official Resume</div>
+          <div style="font-size: 0.75rem; color: #94a3b8;">Standalone Download & Print Hub</div>
+        </div>
+        <div class="modal-top-actions">
+          <button onclick="downloadResumeFile('pdf')" class="btn btn-primary" title="Print to PDF or Save as PDF">
+            🖨️ Print / Save as PDF
+          </button>
+          <button onclick="downloadResumeFile('word')" class="btn btn-outline" style="background: #1e293b; color: #e2e8f0; border-color: #334155;" title="Download as Microsoft Word document">
+            📄 Download Word (.doc)
+          </button>
+          <button onclick="downloadResumeFile('html')" class="btn btn-outline" style="background: #1e293b; color: #e2e8f0; border-color: #334155;" title="Download Standalone Offline HTML">
+            🌐 Download HTML
+          </button>
+          <button onclick="closeResumeModal()" style="background: none; color: #94a3b8; font-size: 1.4rem; padding: 0 6px; margin-left: 6px;">✕</button>
+        </div>
+      </div>
+
+      <!-- Scrollable Resume Paper -->
+      <div class="modal-content" id="printableArea">
+        <div class="resume-sheet">
+          <div class="resume-hd">
+            <h2>HIMANSHU SHARMA</h2>
+            <div class="r-sub">IT SUPPORT ENGINEER | APPLICATION SUPPORT | SYSTEM & NETWORK SUPPORT</div>
+            <div class="r-meta">
+              Haridwar, India • +91 8171589855 • himanshusharma16feb@gmail.com
+            </div>
+          </div>
+
+          <div class="r-sec">
+            <div class="r-sec-t">PROFESSIONAL SUMMARY</div>
+            <p class="r-p">
+              IT professional with 6+ years of experience across Technical Support, Salesforce Application Support, hardware troubleshooting, network support, and end-user operations. Experienced in resolving business-critical user issues, supporting field-sales applications, troubleshooting location, attendance and stock workflows, and delivering remote/on-site assistance and user training. MCA qualified with a strong foundation in IT support, networking and hardware. Targeting IT Support Engineer, Application Support Engineer, System Administrator, Technical Support Engineer, or Network Support roles.
+            </p>
+          </div>
+
+          <div class="r-sec">
+            <div class="r-sec-t">CORE COMPETENCIES</div>
+            <div class="r-grid-2">
+              <div>• Salesforce Application Support</div>
+              <div>• IT Helpdesk & End-User Support</div>
+              <div>• Incident Troubleshooting</div>
+              <div>• Remote Support & Video Guidance</div>
+              <div>• Hardware & Windows Support</div>
+              <div>• LAN / WAN & Network Support</div>
+              <div>• User Training & Onboarding</div>
+              <div>• Issue Documentation & Knowledge Base</div>
+            </div>
+          </div>
+
+          <div class="r-sec">
+            <div class="r-sec-t">PROFESSIONAL EXPERIENCE</div>
+
+            <div class="r-exp">
+              <div class="r-exp-head">
+                <div>Support Engineer | Bharuwa Solutions Private Limited</div>
+                <div style="font-family: var(--mono); font-size: 0.78rem; color: #64748b;">Jun 2023 – Present • Haridwar, India</div>
+              </div>
+              <ul class="r-bullets">
+                <li>Provide application and technical support to the sales team using Salesforce and connected business workflows.</li>
+                <li>Troubleshoot beat-route mapping, location and tracking issues to support accurate field-sales reporting.</li>
+                <li>Resolve stock, attendance and user-access discrepancies and coordinate issues through to closure.</li>
+                <li>Create and maintain new shop and distributor records in Salesforce based on business requirements.</li>
+                <li>Train new and existing users on application updates, features, workflows and best practices.</li>
+                <li>Provide remote support through Google Meet and other collaboration tools, reducing disruption to field operations.</li>
+                <li>Analyze recurring user issues and feedback, coordinate with internal teams, and recommend application/process improvements.</li>
+              </ul>
+            </div>
+
+            <div class="r-exp">
+              <div class="r-exp-head">
+                <div>Technical Support Associate | Concentrix</div>
+                <div style="font-family: var(--mono); font-size: 0.78rem; color: #64748b;">Mar 2022 – Feb 2023 • Gurugram, India</div>
+              </div>
+              <ul class="r-bullets">
+                <li>Provided remote technical support and troubleshooting for Dell desktops, laptops and servers.</li>
+                <li>Diagnosed hardware issues, guided users through resolution steps, and minimized service downtime.</li>
+                <li>Coordinated escalations with engineering and development teams for complex technical problems.</li>
+                <li>Managed hardware repair/replacement workflows and maintained accurate case documentation.</li>
+                <li>Contributed to internal knowledge-base articles and training materials to improve team efficiency.</li>
+              </ul>
+            </div>
+
+            <div class="r-exp">
+              <div class="r-exp-head">
+                <div>Technical Support Executive (TSE) | Teleperformance India</div>
+                <div style="font-family: var(--mono); font-size: 0.78rem; color: #64748b;">Aug 2015 – Jul 2017 • Jaipur, India</div>
+              </div>
+              <ul class="r-bullets">
+                <li>Delivered technical support for Microsoft operating systems, applications, hardware and peripherals through phone, email and remote assistance.</li>
+                <li>Diagnosed complex technical issues and guided customers through installation, upgrades, configuration and troubleshooting.</li>
+                <li>Worked with Microsoft internal support teams on escalated cases and documented troubleshooting and resolutions.</li>
+                <li>Created support documentation and knowledge-base content to improve resolution efficiency and self-service.</li>
+                <li>Provided mentoring and technical guidance to new team members.</li>
+              </ul>
+            </div>
+
+            <div class="r-exp">
+              <div class="r-exp-head">
+                <div>Technical Support Executive | Tata Business Support Service Limited</div>
+                <div style="font-family: var(--mono); font-size: 0.78rem; color: #64748b;">Jun 2014 – Dec 2014 • Noida, India</div>
+              </div>
+              <ul class="r-bullets">
+                <li>Provided first-level technical support for network connectivity, access and user issues.</li>
+                <li>Performed basic monitoring and troubleshooting of routers, switches and firewalls and escalated complex issues.</li>
+                <li>Supported VPN and Wi-Fi connectivity issues and guided users through basic network configurations.</li>
+                <li>Documented incidents, troubleshooting steps and resolutions while collaborating with senior engineers.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="r-sec">
+            <div class="r-sec-t">EDUCATION</div>
+            <div style="display: flex; flex-direction: column; gap: 4px; font-size: 0.83rem;">
+              <div><strong>Master of Computer Applications (MCA)</strong> | Chandigarh University, India</div>
+              <div><strong>Post Graduate Diploma in Computer Hardware & Networking</strong> | UP Board of Technical Education, India</div>
+              <div><strong>Bachelor of Science (B.Sc.)</strong> | CCS University, Meerut, India</div>
+            </div>
+          </div>
+
+          <div class="r-sec">
+            <div class="r-sec-t">TECHNICAL SKILLS</div>
+            <div style="font-size: 0.82rem; line-height: 1.5; color: #1e293b;">
+              <div><strong>Application Support:</strong> Salesforce • Application troubleshooting • User support • Workflow assistance</div>
+              <div><strong>Networking:</strong> LAN/WAN • IP addressing • Network protocols • Routers • Switches • Firewalls • VPN • Wi-Fi</div>
+              <div><strong>Hardware & OS:</strong> PC/Laptop hardware • Peripherals • Diagnostics • Installation & maintenance • Windows OS</div>
+              <div><strong>Support Tools:</strong> Remote troubleshooting • Google Meet • Ticket/case documentation • Knowledge-base support</div>
+            </div>
+          </div>
+
+          <div class="r-sec">
+            <div class="r-sec-t">CERTIFICATIONS</div>
+            <ul style="padding-left: 18px; font-size: 0.82rem;">
+              <li><strong>Cisco Certified Network Associate (CCNA)</strong> – IIHT, Vikaspuri, New Delhi</li>
+              <li><strong>Computer Hardware Specialist Certification</strong> – JET Institute, Saharanpur</li>
+            </ul>
+          </div>
+
+          <div class="r-sec">
+            <div class="r-sec-t">PROFESSIONAL STRENGTHS</div>
+            <p style="font-size: 0.82rem; color: #1e293b;">
+              Problem Solving • Analytical Thinking • User Communication • Team Collaboration • Adaptability • Customer-Centric Support
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="modal-foot">
+        <div>Ready to download or print on standard A4 format</div>
+        <button onclick="closeResumeModal()" class="btn btn-outline" style="padding: 6px 14px; font-size: 0.78rem;">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification element -->
+  <div id="toast" class="toast">
+    <span id="toastMsg">Action completed</span>
+  </div>
+
+  <!-- Embedded Vanilla JavaScript -->
+  <script>
+    // Real Case Studies Data
+    const casesData = [
+      {
+        title: "Salesforce Beat-Route GPS Mapping Discrepancies",
+        domain: "Bharuwa Solutions • Application Support",
+        scenario: "Over 40 field-sales representatives were unable to record daily shop visits and attendance due to geo-fencing coordinate drift and sync failures.",
+        challenge: "Daily sales revenue reporting and attendance incentive payouts were compromised across key retail territories.",
+        diagnosis: "Identified mobile geolocation cache corruption on Android handhelds coupled with an API timeout during weak 3G/4G tower handoffs.",
+        resolution: "Re-indexed coordinates against the regional master dataset, configured offline tolerance parameters, and authored a 1-page field troubleshooting guide.",
+        impact: "Restored 100% daily visit recording compliance and reduced recurring field tickets by 75%."
+      },
+      {
+        title: "Remote Enterprise Server Memory Diagnostic & Triage",
+        domain: "Concentrix • Dell Enterprise Systems",
+        scenario: "An enterprise customer reported repetitive kernel panic halts and memory bus errors on a Dell PowerEdge production database server.",
+        challenge: "High-priority customer incident under strict 4-hour SLA penalty for total system downtime.",
+        diagnosis: "Analyzed remote iDRAC system event logs (SEL) and conducted 32-bit hardware diagnostic isolation to pinpoint a failing DIMM slot.",
+        resolution: "Dispatched the exact replacement ECC RAM module with pre-cleared field engineering instructions, circumventing unnecessary motherboard replacement.",
+        impact: "Minimized customer downtime to a single scheduled reboot window with zero database corruption."
+      },
+      {
+        title: "Branch VPN Tunnel Disconnection & Gateway Recovery",
+        domain: "Tata BSS • Network Infrastructure",
+        scenario: "A regional branch team lost secure tunnel connectivity to central ERP and file servers following a perimeter router reboot.",
+        challenge: "Branch staff completely halted from processing customer transactions and service tickets.",
+        diagnosis: "Performed ping and traceroute isolation, discovering an MTU size mismatch that fragmented IPsec Phase-2 packets after ISP routing changes.",
+        resolution: "Adjusted TCP MSS clamping and MTU values on the branch edge router, flushed stale security associations, and stabilized tunnel negotiation.",
+        impact: "Re-established full network connectivity in 25 minutes; configured ping watchdog for automatic failover."
+      }
+    ];
+
+    function showCase(idx, btn) {
+      document.querySelectorAll('.case-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      const c = casesData[idx];
+      document.getElementById('caseContent').innerHTML = `
+        <div style="font-family: var(--mono); font-size: 0.75rem; text-transform: uppercase; color: #38bdf8; margin-bottom: 6px;">
+          ${c.domain}
+        </div>
+        <div class="case-title">${c.title}</div>
+        <div class="case-scenario"><strong>Scenario:</strong> ${c.scenario}</div>
+        <div style="font-size: 0.85rem; color: #fca5a5; margin-bottom: 12px;"><strong>Risk / Challenge:</strong> ${c.challenge}</div>
+        <div class="case-grid">
+          <div class="case-box">
+            <div class="case-box-title">🔧 Diagnostic Steps Taken</div>
+            <p>${c.diagnosis}</p>
+          </div>
+          <div class="case-box" style="border-color: #059669; background: #064e3b33;">
+            <div class="case-box-title" style="color: #34d399;">✓ Resolution & Result</div>
+            <p>${c.resolution}</p>
+            <p style="margin-top: 8px; color: #6ee7b7; font-weight: 600;">Impact: ${c.impact}</p>
+          </div>
+        </div>
+      `;
+    }
+
+    // Initialize first case
+    showCase(0, document.querySelector('.case-btn'));
+
+    // Experience Filter
+    function filterExperience(cat, btn) {
+      document.querySelectorAll('.filter-tabs .tab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const cards = document.querySelectorAll('.exp-card');
+      cards.forEach(card => {
+        if (cat === 'all' || card.dataset.cat.includes(cat)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Skills Search
+    function searchSkills() {
+      const q = document.getElementById('skillSearch').value.toLowerCase().trim();
+      const pills = document.querySelectorAll('.skill-pill');
+      pills.forEach(p => {
+        const text = p.innerText.toLowerCase();
+        if (!q || text.includes(q)) {
+          p.style.display = 'flex';
+        } else {
+          p.style.display = 'none';
+        }
+      });
+    }
+
+    // Mobile Navigation Toggle
+    function toggleMobileNav() {
+      const nav = document.getElementById('mobileNav');
+      nav.classList.toggle('open');
+    }
+
+    // Modal Handlers
+    function openResumeModal() {
+      document.getElementById('resumeModal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeResumeModal() {
+      document.getElementById('resumeModal').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function closeModalOnBackdrop(e) {
+      if (e.target.id === 'resumeModal') {
+        closeResumeModal();
+      }
+    }
+
+    // Copy to Clipboard
+    function copyText(text, message) {
+      navigator.clipboard.writeText(text).then(() => {
+        showToast(message || 'Copied to clipboard!');
+      }).catch(() => {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        showToast(message || 'Copied to clipboard!');
+      });
+    }
+
+    // Toast Notification
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      document.getElementById('toastMsg').innerText = msg;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3000);
+    }
+
+    // Download Resume in Different Formats
+    function downloadResumeFile(format) {
+      const resumeHtml = document.getElementById('printableArea').innerHTML;
+      const fullDoc = `<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Himanshu Sharma - Resume</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1e293b; line-height: 1.45; font-size: 11pt; padding: 25px; max-width: 800px; margin: 0 auto; }
+    h2 { font-size: 20pt; margin: 0 0 4px; text-transform: uppercase; }
+    .r-sub { font-size: 10pt; font-weight: bold; color: #475569; margin-bottom: 6px; }
+    .r-meta { font-size: 9.5pt; color: #64748b; margin-bottom: 16px; }
+    .r-sec-t { font-size: 11pt; font-weight: bold; border-bottom: 1px solid #cbd5e1; padding-bottom: 3px; margin: 16px 0 8px; text-transform: uppercase; }
+    .r-exp { margin-bottom: 12px; }
+    .r-exp-head { font-weight: bold; font-size: 10pt; margin-bottom: 3px; }
+    ul { margin: 4px 0 8px 20px; font-size: 9.5pt; }
+    li { margin-bottom: 3px; }
+    .r-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 16px; font-size: 9.5pt; font-weight: bold; }
+    @media print { body { padding: 0; } }
+  </style>
+</head>
+<body>
+  ${resumeHtml}
+</body>
+</html>`;
+
+      if (format === 'pdf') {
+        // Open safe print window or trigger print
+        const printWin = window.open('', '_blank');
+        if (printWin) {
+          printWin.document.write(fullDoc);
+          printWin.document.close();
+          setTimeout(() => {
+            printWin.focus();
+            printWin.print();
+          }, 300);
+        } else {
+          // If popup was blocked by browser sandbox, trigger HTML file download with print prompt
+          const blob = new Blob([fullDoc], { type: 'text/html;charset=utf-8' });
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = 'Himanshu_Sharma_Resume.html';
+          a.click();
+          URL.revokeObjectURL(url);
+          showToast('Resume downloaded! Open and press Ctrl+P to save as PDF.');
+        }
+      } else if (format === 'word') {
+        const blob = new Blob(['\ufeff' + fullDoc], { type: 'application/msword' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'Himanshu_Sharma_Resume.doc';
+        a.click();
+        URL.revokeObjectURL(url);
+        showToast('Himanshu_Sharma_Resume.doc downloaded!');
+      } else if (format === 'html') {
+        const blob = new Blob([fullDoc], { type: 'text/html;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'Himanshu_Sharma_Resume.html';
+        a.click();
+        URL.revokeObjectURL(url);
+        showToast('Himanshu_Sharma_Resume.html downloaded!');
+      }
+    }
+
+    // Recruiter Form Handlers
+    function handleRecruiterSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('recruiterName').value;
+      const role = document.getElementById('recruiterRole').value;
+      const msg = document.getElementById('recruiterMsg').value;
+      const subject = encodeURIComponent(`Opportunity Discussion: ${role} - ${name}`);
+      const body = encodeURIComponent(`Hello Himanshu,\n\nI am reaching out regarding a position for ${role}.\n\nDetails:\n${msg || 'We would like to connect with you to discuss your experience in IT and Application Support.'}\n\nBest regards,\n${name}`);
+      window.location.href = `mailto:himanshusharma16feb@gmail.com?subject=${subject}&body=${body}`;
+    }
+
+    function copyRecruiterDraft() {
+      const name = document.getElementById('recruiterName').value || '[Your Name / Company]';
+      const role = document.getElementById('recruiterRole').value;
+      const msg = document.getElementById('recruiterMsg').value || '[Job description / schedule details]';
+      const text = `Subject: Opportunity Discussion: ${role} - ${name}\n\nHello Himanshu,\n\nI am reaching out regarding an opportunity for ${role}.\n\nDetails:\n${msg}\n\nBest regards,\n${name}`;
+      copyText(text, 'Message draft copied to clipboard!');
+    }
+  </script>
+</body>
+</html>
